@@ -25,7 +25,7 @@ student_arr = ['Joe',
 'Colleen',
 'imodd']
 
-def random_assign(arr):
+def true_random_assign_pairs(arr):
     print([arr.pop(random.randrange(len(arr))) for _ in range(2)])
     if len(arr) > 1:
         random_assign(arr)
