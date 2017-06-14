@@ -3,6 +3,9 @@
 - Uses past pair history to inform future pair assignment (does not randomly generate pairs)
 - Does not perfectly cycle pairs (i.e. where each element is paired with all others once before seeing a repeat)
 
+# How-to
+- after install (see below) use 'get_pairs' in bash anywhere after installing to get a print out of pairs
+
 
 ## One line install (requires brew)
 ```bash
@@ -13,13 +16,11 @@ bash <(curl -s https://raw.githubusercontent.com/DanielSeehausen/pseudo_smart_ra
   - checks if you have python3 installed: brew installs it if not
   - clones the repo down from github
   - makes the python script executable
+  - creates a .json file that records pairing results, which the pairing function then uses to make more more evenly distributed pairs in subsequent calls
+  - enables you to run 'get_pairs' from the command line anywhere (while on the user that installed the script)
+  - reloads your .bash_profile (just open on new terminal if you are getting a 'no such file or directory')
   - aliases the script to its installed directory in your ~/.bash_profile (Note: either make one or put the alias in your .profile if you aren't using .bash_profile)
   - hax most of your $ecret files
-
-### What this does
-- enables you to run 'get_pairs' from the command line anywhere (while on the user that installed the script)
-- creates a .json file that records pairing results, which the pairing function then uses to make more more evenly distributed pairs in subsequent calls
-- reloads your .bash_profile
 
 ### Tidbits
 - To reset the db: delete the pairing_db.json file that auto generates after the first time get_pairs is run
