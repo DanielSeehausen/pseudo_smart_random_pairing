@@ -14,3 +14,7 @@ echo -e "\n...making script executable"
 sudo chmod +x ./pseudo_smart_random_pairing/smart_assign.py && echo -e "\t...done ${CHECK}"
 echo -e "\n...adding get_pairs to path via symlink in /usr/local/bin/"
 (sudo ln -s $PWD/pseudo_smart_random_pairing/smart_assign.py /usr/local/bin/get_pairs && echo -e "\t...done ${CHECK}") || echo -e "\t...something went wrong -- does the file already exist?"
+echo -e "\n...reloading path"
+source ~/.bash_profile && echo -e "\t...done ${CHECK}"
+
+echo -e "\n***\nthe command 'get_pairs' may now be run from the terminal.\nMake sure to update the pseudo_smart_random_pairing/students.py file first!\n***"
