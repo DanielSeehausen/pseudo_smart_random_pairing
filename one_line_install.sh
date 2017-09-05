@@ -1,10 +1,11 @@
 
 CHECK='\033[0;32m\xE2\x9C\x94\033[0m'
 
-echo -e "\nlooking for Python3..."
+echo -e "\n...looking for Python3..."
 if command -v python3 > /dev/null 2>&1; then
   echo -e "\t...already installed ${CHECK}\n"
 else
+  echo -e "\t...missing -- installing now"
   (brew install python3 && echo -e "\t...done ${CHECK}") || echo -e "\t...Python3 installation failed! Is brew missing? Is it installed but not in your path?\n"
 fi
 
@@ -17,4 +18,4 @@ echo -e "\n...adding get_pairs to path via symlink in /usr/local/bin/"
 echo -e "\n...reloading path"
 source ~/.bash_profile && echo -e "\t...done ${CHECK}"
 
-echo -e "\n***\nthe command 'get_pairs' may now be run from the terminal.\nMake sure to update the pseudo_smart_random_pairing/students.py file first!\n***"
+echo -e "\n***\nThe command 'get_pairs' may now be run from the terminal.\nMake sure to update the pseudo_smart_random_pairing/students.py file first!\n***"

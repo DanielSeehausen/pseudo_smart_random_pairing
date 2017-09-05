@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import random, os.path, sys, json, inspect
+import random, os.path, sys, json
 from students import student_arr
 from pathlib import Path
 
