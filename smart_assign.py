@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
+
+from pathlib import Path
 import random, os.path, sys, json, inspect
 
-db_name = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) + '/pairing_db.json'
+db_name = os.path.realpath('pairing_db.json')
 
 print(db_name)
 
