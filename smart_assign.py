@@ -1,29 +1,33 @@
-import random, os.path, sys, json
+import random, os.path, sys, json, inspect
 
-db_name = 'pairing_db.json'
-student_arr = ['Joe',
-'Diljeet',
-'William',
-'Jason',
-'Jeremy',
-'David',
-'Alex',
-'Trey',
-'Adames',
-'Sarah',
-'Yelstin',
-'Charles',
-'Paul',
-'Catherine',
-'Alex S',
-'eli',
-'Panagiotis',
-'Thomas',
-'Zali',
-'racquel',
-'Jessica',
-'Colleen',
-'imodd']
+db_name = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe()))) + '/pairing_db.json'
+
+print(db_name)
+
+student_arr = [
+"Brooke	Ryan",
+"Ashe Austaire",
+"Diego Dorado",
+"Sikander Chowhan",
+"David Squires",
+"Ian Ramos",
+"Elbin Keeppanasseril",
+"David Goodman",
+"Matthew Gellert",
+"Matthew Lawford",
+"Anna Bush",
+"David Tannenbaum",
+"Ryan Sperzel",
+"Al Artesona",
+"William Scripps",
+"Christina Pan",
+"Ian Shaw",
+"Natalie Deal",
+"Jon Openshaw",
+"Danielle Bennet",
+"Lisa Hufnagel",
+"Cole Shapiro"
+]
 
 def true_random_assign_pairs(arr):
     print([arr.pop(random.randrange(len(arr))) for _ in range(2)])
