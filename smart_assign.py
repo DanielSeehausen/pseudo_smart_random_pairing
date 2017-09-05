@@ -2,8 +2,9 @@
 
 import random, os.path, sys, json, inspect
 from students import student_arr
+from pathlib import Path
 
-db_name = os.path.realpath('pairing_db.json')
+db_name = os.path.dirname(os.path.realpath(__file__)) + '/pairing_db.json'
 
 def true_random_assign_pairs(arr):
     print([arr.pop(random.randrange(len(arr))) for _ in range(2)])
