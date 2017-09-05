@@ -9,7 +9,7 @@ else
 fi
 
 echo "...cloning repo"
-git clone git@github.com:DanielSeehausen/pseudo_smart_random_pairing.git && echo -e "\t...done ${CHECK}"
+git clone git@github.com:DanielSeehausen/pseudo_smart_random_pairing.git && echo -e "\t...done ${CHECK}" && cd pseudo_smart_random_pairing
 echo -e "\n...making script executable"
 sudo chmod +x ./pseudo_smart_random_pairing/smart_assign.py && echo -e "\t...done ${CHECK}"
 echo -e "\n...adding get_pairs to path via symlink in /usr/bin/"
