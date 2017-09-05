@@ -7,8 +7,7 @@ else
 fi
 
 git clone git@github.com:DanielSeehausen/pseudo_smart_random_pairing.git
-touch POO.txt
 sudo chmod +x ./pseudo_smart_random_pairing/smart_assign.py
 sudo touch /usr/bin/get_pairs
 sudo chmod +x /usr/bin/get_pairs
-echo "python3 $PWD/pseudo_smart_random_pairing/smart_assign.py" >> /usr/bin/get_pairs
+sudo echo "python3 $PWD/pseudo_smart_random_pairing/smart_assign.py" >> /usr/bin/get_pairs
