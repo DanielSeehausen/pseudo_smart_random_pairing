@@ -18,4 +18,4 @@ echo -e "\n...adding get_pairs to path via symlink in /usr/local/bin/"
 echo -e "\n...reloading path"
 source ~/.bash_profile && echo -e "\t...done ${CHECK}"
 
-echo -e "\n***\nThe command 'get_pairs' may now be run from the terminal.\nMake sure to update the pseudo_smart_random_pairing/students.py file first!\n***"
+echo -e "\n*************************************************************************\nThe command 'get_pairs' may now be run from the terminal.\nMake sure to update the pseudo_smart_random_pairing/students.py file first!\n*************************************************************************"
