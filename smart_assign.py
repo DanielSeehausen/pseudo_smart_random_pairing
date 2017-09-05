@@ -1,36 +1,9 @@
 #!/usr/bin/env python3
 
-from pathlib import Path
 import random, os.path, sys, json, inspect
+from students import student_arr
 
 db_name = os.path.realpath('pairing_db.json')
-
-print(db_name)
-
-student_arr = [
-"Brooke	Ryan",
-"Ashe Austaire",
-"Diego Dorado",
-"Sikander Chowhan",
-"David Squires",
-"Ian Ramos",
-"Elbin Keeppanasseril",
-"David Goodman",
-"Matthew Gellert",
-"Matthew Lawford",
-"Anna Bush",
-"David Tannenbaum",
-"Ryan Sperzel",
-"Al Artesona",
-"William Scripps",
-"Christina Pan",
-"Ian Shaw",
-"Natalie Deal",
-"Jon Openshaw",
-"Danielle Bennet",
-"Lisa Hufnagel",
-"Cole Shapiro"
-]
 
 def true_random_assign_pairs(arr):
     print([arr.pop(random.randrange(len(arr))) for _ in range(2)])
@@ -73,8 +46,10 @@ def print_pairing_dict(pdict):
 def read_dict(file):
     try: #little ducktyping -- catches both file not found and file empty (incase it was erased)
         with open(db_name, 'r') as f:
+            print("updating db...db_name
             return json.load(f)
     except (FileNotFoundError, ValueError):
+        print("creating db...")
         return init_pairing_dict(student_arr)
 
 def write_dict(file, data):
